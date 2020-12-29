@@ -49,7 +49,8 @@ module.exports = {
       },
       { 
         test: /\.txt$/, 
-        use: 'raw-loader' },
+        use: 'raw-loader' 
+      },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
