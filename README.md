@@ -67,7 +67,15 @@ module.exports = {
         resolve: {
             extensions: ['.sass', '.scss']
         }
-      }
+      },
+      { 
+        test: /\.txt$/, 
+        use: 'raw-loader' 
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+      },
     ],
   },
   plugins: [
