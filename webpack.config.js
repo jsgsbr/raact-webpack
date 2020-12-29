@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: './src/index.js',
   output: {
-    filename: "bundle.[contenthash].js",
+    filename: "js/bundle.[contenthash].js",
     path: path.resolve(__dirname, "dist"),
     publicPath: ""
   },
@@ -30,7 +30,10 @@ module.exports = {
       {
         test: /\.(png|jpe?g|gif)$/i,
         use:  [{
-            loader: 'file-loader'
+            loader: 'file-loader',
+            options: {
+              name: 'images/[contenthash].[ext]'
+            }
         }]
       },
       {
